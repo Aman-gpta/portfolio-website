@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import SmoothTyping from '../components/SmoothTyping';
 import ProductCard from '../components/ProductCard'; // Import the new card
 import WhyChooseUs from '../components/WhyChooseUs'; // Import the new component
+import Threads from '../components/Threads'; // Import the new Threads component
 import bg2 from '../assets/bg2.jpg';
 import offwhiteImage from '../assets/offwhite.jpg';
 import copperImg from '../assets/prod1.jpg';
@@ -51,9 +52,16 @@ const Home = () => {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                backgroundAttachment: 'fixed',
-                color: '#222'
+                backgroundAttachment: 'fixed'
             }}>
+                <div className="threads-background-container">
+                    <Threads
+                        color={[0, 0, 0]}
+                        amplitude={1}
+                        distance={0}
+                        enableMouseInteraction={true}
+                    />
+                </div>
                 <div className="container">
                     <h2 className="section-title" style={{color: '#111'}}>Our Products</h2>
                     <div className="products-grid">

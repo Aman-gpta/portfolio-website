@@ -249,37 +249,28 @@
 
 .directors-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 2rem;
-    width: 95%;
-    margin-left: 2.5%;
-    position: relative;
-    z-index: 2;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
 }
 
 .director-card {
     background: linear-gradient(135deg, #444 60%, #666 100%) !important;
-    color: #fff;
     border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    /* Remove transition for static appearance */
-    transition: none !important;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .director-card:hover {
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .director-image {
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
 .director-placeholder {
