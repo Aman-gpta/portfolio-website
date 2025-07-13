@@ -309,7 +309,7 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-brand-image {
-        height: 120px;
+        height: 250px;
     }
 
     .navbar-container {
@@ -341,12 +341,11 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-logo-img {
-        max-height: 80px;
-        max-width: 90px;
+        max-height: 70px;
     }
 
     .navbar-brand-image {
-        height: 105px;
+        height: 180px;
     }
 
     .navbar-logo {
@@ -375,7 +374,7 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-brand-image {
-        height: 90px;
+        height: 200px;
     }
 
     .mobile-menu-logo-img {
