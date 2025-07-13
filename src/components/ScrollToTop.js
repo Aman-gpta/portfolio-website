@@ -75,7 +75,7 @@ const ScrollToTop = () => {
         // Execute after images and other resources might load
         setTimeout(performScrollReset, 500);
 
-    }, [pathname, hash]);
+    }, [pathname, hash, performScrollReset]);
 
     // Also listen for custom scroll reset events
     useEffect(() => {
@@ -88,7 +88,7 @@ const ScrollToTop = () => {
         return () => {
             window.removeEventListener('forceScrollReset', handleCustomScrollReset);
         };
-    }, []);
+    }, [performScrollReset]);
 
     // Make the scroll reset function globally available
     useEffect(() => {
@@ -97,7 +97,7 @@ const ScrollToTop = () => {
         return () => {
             delete window.forceScrollToTop;
         };
-    }, []);
+    }, [performScrollReset]);
 
     return null;
 };

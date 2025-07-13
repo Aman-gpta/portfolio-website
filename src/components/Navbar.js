@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/LOGO NAVBAR.png';
-import newlogo from '../assets/Logo Design ANISHK IMPEX with Elegant Contrast (4).png';
+import brandImage from '../assets/erasebg-transformed.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -44,10 +44,6 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         setIsOpen(prevState => !prevState);
-    };
-
-    const openWhatsApp = () => {
-        window.open(`https://wa.me/+919891533533`, '_blank');
     };
 
     const handleNavClick = () => {
@@ -126,9 +122,9 @@ const Navbar = () => {
             <div className="navbar-container">
                 <div className="navbar-brand" style={{marginTop: '24px'}}>
                     <Link to="/" className="navbar-logo" onClick={handleNavClick}>
-                        <img src={logo} alt="Anishk Impex" className="navbar-logo-img" />
+                        <img src={logo} alt="Global Metal Traders" className="navbar-logo-img" />
                     </Link>
-                    <img src={newlogo} alt="Anishk Impex" className="navbar-logo-text" />
+                    <img src={brandImage} alt="Global Metal Traders" className="navbar-brand-image" />
                 </div>
 
                 {/* Desktop Menu */}
@@ -166,9 +162,9 @@ const Navbar = () => {
             <div className={`navbar-mobile-menu ${isOpen ? 'active' : ''}`}>
                 <div className="mobile-menu-header">
                     <Link to="/" className="navbar-logo" onClick={handleNavClick}>
-                        <img src={logo} alt="Anishk Impex" className="mobile-menu-logo-img" />
+                        <img src={logo} alt="Global Metal Traders" className="mobile-menu-logo-img" />
                     </Link>
-                    <img src={newlogo} alt="Anishk Impex" className="mobile-menu-logo-text" />
+                    <img src={brandImage} alt="Global Metal Traders" className="navbar-brand-image" />
                 </div>
                 {navItems.map((item, index) => (
                     item.isProducts ? (

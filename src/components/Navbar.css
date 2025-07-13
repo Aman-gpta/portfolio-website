@@ -18,7 +18,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-scrolled .navbar-logo-text,
+.navbar-scrolled .navbar-brand-text,
 .navbar-scrolled .navbar-item,
 .navbar-scrolled .whatsapp-nav-button,
 .navbar-scrolled .navbar-toggle {
@@ -67,10 +67,10 @@
 }
 
 .navbar-logo-img {
-    height: 300px;
+    height: auto;
     width: auto;
     max-height: 110px;
-    max-width: 450px;
+    max-width: 150px;
     object-fit: contain;
     object-position: center;
     margin-top: 0;
@@ -80,17 +80,11 @@
     margin-left: 0;
 }
 
-.navbar-logo-text {
-    height: 300px;
+.navbar-brand-image {
+    height: 220px;
     width: auto;
-    max-width: 1500px;
     object-fit: contain;
-    display: block;
     margin-left: 10px;
-}
-
-body.home-page .navbar-logo-text {
-    color: #fff !important;
 }
 
 /* Desktop Menu */
@@ -237,75 +231,52 @@ body.home-page .whatsapp-nav-button:hover {
     margin-right: 10px;
 }
 
-.mobile-menu-logo-text {
-    height: 210px;
-    width: auto;
-    max-width: 750px;
-    object-fit: contain;
-    display: block;
-    margin-left: 10px;
-}
-
-body.home-page .mobile-menu-logo-text {
-    color: #fff !important;
-}
-
 .navbar-mobile-menu.active {
     transform: translateX(0);
     visibility: visible;
-    /* Show when active */
 }
 
 .navbar-mobile-item {
-    color: var(--white);
-    text-decoration: none;
-    padding: 15px 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    font-weight: 600;
-    font-size: 1.1rem;
     display: block;
-    width: 100%;
-    text-align: left;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    position: relative;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 body.home-page .navbar-mobile-item {
-    color: #fff !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .navbar-mobile-item.whatsapp-nav-button {
-    background: transparent;
-    color: #111;
-    text-align: left;
-    padding: 15px 30px;
+    background-color: transparent;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-weight: 600;
     width: 100%;
+    text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     cursor: pointer;
-    text-shadow: none !important;
-    box-shadow: none !important;
 }
 
 body.home-page .navbar-mobile-item.whatsapp-nav-button {
-    color: #fff !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .navbar-mobile-item:hover,
-.navbar-mobile-item.active,
 .navbar-mobile-item.whatsapp-nav-button:hover {
+    background: rgba(255, 255, 255, 0.05);
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
 }
 
 body.home-page .navbar-mobile-item:hover,
-body.home-page .navbar-mobile-item.active,
 body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
-    color: #fff !important;
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
 }
 
 .navbar-mobile-item.active {
@@ -316,45 +287,44 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1009;
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
 
 .navbar-mobile-menu.active+.navbar-overlay {
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
+    transition: opacity 0.3s ease;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .navbar-logo-img {
-        width: 130px;
-        max-width: 130px;
+        max-height: 90px;
+        max-width: 100px;
     }
 
-    .navbar-logo-text {
-        height: 240px;
-        max-width: 1200px;
+    .navbar-brand-image {
+        height: 120px;
     }
 
     .navbar-container {
-        padding: 8px 25px 8px 0;
+        padding: 0 1rem;
     }
 
     .navbar-brand {
-        margin-left: -10px;
+        gap: 12px;
     }
 }
 
 @media (max-width: 768px) {
     .navbar {
-        height: 120px;
-        min-height: 120px;
+        height: 70px;
+        min-height: 70px;
     }
 
     .navbar-menu {
@@ -362,38 +332,37 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-toggle {
-        display: block;
+        display: flex;
     }
 
     .navbar-container {
-        padding: 5px 20px 5px 10px;
-        height: 120px;
+        padding: 0 20px;
+        height: 70px;
     }
 
     .navbar-logo-img {
-        height: 110px;
-        width: auto;
-        max-width: unset;
+        max-height: 80px;
+        max-width: 90px;
     }
 
-    .navbar-logo-text {
-        height: 200px;
-        max-width: 900px;
+    .navbar-brand-image {
+        height: 105px;
     }
 
     .navbar-logo {
         gap: 10px;
-        padding: 0;
+        padding: 5px;
     }
 
     .navbar-brand {
-        margin-left: 0;
+        gap: 10px;
+        padding-left: 0;
     }
 }
 
 @media (max-width: 480px) {
     .navbar-container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .navbar-mobile-menu {
@@ -402,57 +371,37 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-logo-img {
-        height: 100px;
+        max-height: 70px;
     }
 
-    .navbar-logo-text {
-        height: 160px;
-        max-width: 600px;
-    }
-
-    .mobile-menu-logo-img {
+    .navbar-brand-image {
         height: 90px;
     }
 
-    .mobile-menu-logo-text {
-        height: 140px;
-        max-width: 450px;
+    .mobile-menu-logo-img {
+        height: 60px;
     }
 
     .navbar-logo {
-        gap: 8px;
+        gap: 5px;
     }
 
     .navbar-brand {
-        padding-left: 0;
-    }
-
-    .navbar-mobile-item {
-        font-size: 1.2rem;
-        padding: 18px 25px;
-    }
-
-    .navbar-mobile-item:hover,
-    .navbar-mobile-item.whatsapp-nav-button:hover {
-        background: rgba(255, 255, 255, 0.15);
-    }
-
-    .navbar-toggle {
-        padding: 8px;
+        gap: 5px;
     }
 }
 
 @media (max-width: 360px) {
-    .navbar-logo-text {
-        font-size: 0.75rem;
-        max-width: 120px;
+    .navbar-brand-image {
+        display: none;
+        /* Hide text on very small screens to avoid overflow */
     }
 
     .navbar-logo-img {
-        height: 90px;
+        max-height: 60px;
     }
 
     .navbar-container {
-        padding: 5px 10px 5px 5px;
+        padding: 0 5px;
     }
 }

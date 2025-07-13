@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import SmoothTyping from '../components/SmoothTyping';
 import ProductCard from '../components/ProductCard'; // Import the new card
 import WhyChooseUs from '../components/WhyChooseUs'; // Import the new component
