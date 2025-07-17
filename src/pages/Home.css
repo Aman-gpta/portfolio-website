@@ -687,6 +687,342 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Company Overview Section */
+.company-overview-section {
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.company-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.company-text {
+    padding: 0 1rem;
+}
+
+.company-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    .company-title {
+        font-size: 1.5rem;
+    }
+}
+
+.company-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 2rem;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.company-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.company-features .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: transparent;
+    padding: 0.5rem 0;
+    box-shadow: none;
+    border: none;
+}
+
+.company-features .feature-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.company-features .feature-icon svg {
+    width: 50px;
+    height: 50px;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.company-features .feature-item h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+}
+
+.company-features .feature-item p {
+    color: #000000;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: justify;
+}
+
+.company-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.company-img {
+    width: 70%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.company-img:hover {
+    transform: none;
+}
+
+/* Company Overview Mobile Responsiveness */
+@media (max-width: 1200px) {
+    .company-content {
+        gap: 2.5rem;
+        max-width: 1000px;
+    }
+
+    .company-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .company-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .company-text {
+        padding: 0 0.5rem;
+    }
+
+    .company-title {
+        font-size: 2.2rem;
+        text-align: left;
+    }
+
+    .company-features .feature-item {
+        flex-direction: row;
+        text-align: left;
+        gap: 0.8rem;
+        align-items: flex-start;
+    }
+
+    .company-features .feature-icon {
+        flex-shrink: 0;
+    }
+
+    .feature-content {
+        text-align: left;
+    }
+
+    .company-features .feature-item h3 {
+        text-align: left;
+    }
+
+    .company-features .feature-item p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-overview-section {
+        padding: 2.5rem 0;
+        min-height: auto;
+    }
+
+    .company-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+        text-align: left;
+    }
+
+    .company-text {
+        padding: 0;
+    }
+
+    .company-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+        text-align: left;
+    }
+
+    .company-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    .company-features {
+        gap: 1.5rem;
+    }
+
+    .company-features .feature-item {
+        flex-direction: row;
+        text-align: left;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .company-features .feature-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .company-features .feature-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company-features .feature-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+        text-align: left;
+    }
+
+    .company-features .feature-item p {
+        font-size: 0.85rem;
+        text-align: left;
+        line-height: 1.4;
+    }
+
+    .company-image {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .company-img {
+        max-width: 280px;
+        border-radius: 12px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-overview-section {
+        padding: 2rem 0;
+    }
+
+    .company-content {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .company-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+        letter-spacing: 0.3px;
+        text-align: left;
+    }
+
+    .company-description {
+        font-size: 0.85rem;
+        margin-bottom: 1.2rem;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    .company-features {
+        gap: 1.2rem;
+    }
+
+    .company-features .feature-item {
+        flex-direction: row;
+        gap: 0.8rem;
+        padding: 0.3rem 0;
+        align-items: flex-start;
+    }
+
+    .company-features .feature-icon {
+        width: 35px;
+        height: 35px;
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+    }
+
+    .company-features .feature-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .company-features .feature-item h3 {
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .company-features .feature-item p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+        text-align: left;
+    }
+
+    .company-img {
+        max-width: 220px;
+        width: 85%;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .company-title {
+        font-size: 1.6rem;
+    }
+
+    .company-description {
+        font-size: 0.9rem;
+    }
+
+    .company-img {
+        max-width: 250px;
+        border-radius: 10px;
+    }
+}
+
 /* Media query for responsive products grid */
 @media (max-width: 992px) {
     .products-grid {

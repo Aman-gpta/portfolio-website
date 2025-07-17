@@ -117,63 +117,342 @@
     box-shadow: 0 6px 25px rgba(192, 132, 78, 0.4);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .wcu-section-new {
-        min-height: unset;
-        padding: 80px 20px;
+/* Redesigned WhyChooseUs component styles */
+.wcu-section {
+    font-family: 'Arial', sans-serif;
+    padding: 4rem 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wcu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+.wcu-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wcu-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.wcu-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.wcu-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid #b47559;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.wcu-subheading {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.wcu-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.wcu-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #b47559;
+}
+
+.wcu-icon-wrapper {
+    color: #b47559;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.wcu-feature-text h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.wcu-feature-text p {
+    font-size: 0.95rem;
+    color: #bbb;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .wcu-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 
-    .wcu-container-new {
-        flex-direction: column;
-    }
-
-    .wcu-content-column,
     .wcu-image-column {
-        width: 100%;
-        padding: 0;
+        order: -1;
+        /* Image on top */
     }
 
-    .wcu-content-column {
-        margin-bottom: 40px;
-    }
-
-    .wcu-image-column {
-        margin-bottom: 0;
+    .wcu-heading {
+        font-size: 2.2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .wcu-section-new {
-        padding: 40px 20px;
+    .wcu-section {
+        padding: 3rem 1.5rem;
     }
 
-    .wcu-content-column {
-        padding: 0;
+    .wcu-heading {
+        font-size: 2rem;
     }
 
-    .wcu-main-heading {
-        font-size: 2.2rem;
-    }
-
-    .wcu-paragraph {
+    .wcu-subheading {
         font-size: 1rem;
     }
 
     .wcu-feature-text h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .wcu-feature-text p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wcu-section {
+        padding: 2.5rem 1rem;
     }
 
-    .wcu-know-more-btn {
+    .wcu-heading {
+        font-size: 1.8rem;
+    }
+
+    .wcu-feature-item {
+        padding: 0.8rem;
+    }
+}
+
+/* --- Why Choose Us Image Layout --- */
+.wcu-section-imglayout {
+    background: url('../assets/offwhite.jpg') center center/cover no-repeat;
+    padding: 60px 10px 40px 10px;
+    text-align: center;
+}
+
+.wcu-img-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a2a3a;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.wcu-img-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px 1fr;
+    grid-template-rows: 120px 220px 120px 80px;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wcu-img-center {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+.wcu-img-main {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.wcu-img-feature,
+.wcu-img-feature-bottomcenter {
+    background: url('../assets/offwhite.jpg') center center/cover no-repeat;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 18px 20px 18px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 320px;
+    min-width: 220px;
+    text-align: left;
+    position: relative;
+    z-index: 3;
+}
+
+.wcu-img-feature h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a2a3a;
+    margin: 0 0 6px 0;
+}
+
+.wcu-img-feature p {
+    font-size: 0.97rem;
+    color: #3a3a3a;
+    margin: 0;
+}
+
+.wcu-img-icon {
+    font-size: 2.1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.wcu-img-feature-topleft {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: end;
+    margin-right: 10px;
+}
+
+.wcu-img-feature-topright {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: start;
+    margin-left: 10px;
+}
+
+.wcu-img-feature-bottomleft {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    justify-self: end;
+    margin-right: 10px;
+}
+
+.wcu-img-feature-bottomright {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    justify-self: start;
+    margin-left: 10px;
+}
+
+.wcu-img-feature-bottomcenter {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 14px 24px;
+    min-width: 220px;
+    max-width: 340px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1100px) {
+    .wcu-img-grid {
+        grid-template-columns: 1fr 260px 1fr;
+        max-width: 700px;
+    }
+
+    .wcu-img-main {
+        width: 220px;
+        height: 150px;
+    }
+
+    .wcu-img-feature {
+        max-width: 220px;
+        min-width: 150px;
+        padding: 12px 10px 12px 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .wcu-img-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .wcu-img-feature,
+    .wcu-img-feature-bottomcenter {
+        margin: 0;
+        max-width: 98vw;
+        min-width: 0;
         width: 100%;
-        padding: 18px;
+        order: 1;
     }
 
-    .wcu-button-wrapper {
-        text-align: center;
+    .wcu-img-center-mobile-last {
+        order: 10;
+    }
+
+    .wcu-img-main {
+        width: 98vw;
+        max-width: 98vw;
+        max-height: 50vw;
+        height: auto;
+    }
+
+    .wcu-img-center {
+        padding: 4vw 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .wcu-img-main {
+        max-width: 96vw;
+        max-height: 60vw;
     }
 }
