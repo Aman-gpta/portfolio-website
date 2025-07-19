@@ -448,3 +448,185 @@ body,
 .section-title {
     color: #111 !important;
 }
+
+/* Mission and Vision Section */
+.mission-vision {
+    padding: 4rem 0;
+    position: relative;
+    background: url('../assets/offwhite.jpg') center center/cover no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+.mission-vision .container {
+    position: relative;
+    z-index: 5;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mission-vision-content {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(50, 50, 50, 0.95) 100%);
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.vision-section,
+.mission-section {
+    margin-bottom: 2.5rem;
+}
+
+.mission-section {
+    margin-bottom: 0;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #c0c0c0 !important;
+    /* Silver color */
+    margin-bottom: 0.5rem;
+    text-align: left;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37 0%, #b8860b 50%, #cd853f 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+    transition: width 0.8s ease-in-out;
+    animation: shimmer 2s infinite;
+}
+
+.section-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
+    border-radius: 2px;
+    animation: slide 3s ease-in-out infinite;
+}
+
+/* Animation for the underline to grow when section comes into view */
+.vision-section:hover .section-heading::after,
+.mission-section:hover .section-heading::after,
+.section-heading::after {
+    width: 60px;
+}
+
+/* Shimmer effect for the copper underline */
+@keyframes shimmer {
+    0% {
+        background: linear-gradient(90deg, #d4af37 0%, #b8860b 50%, #cd853f 100%);
+    }
+
+    50% {
+        background: linear-gradient(90deg, #cd853f 0%, #d4af37 50%, #b8860b 100%);
+    }
+
+    100% {
+        background: linear-gradient(90deg, #d4af37 0%, #b8860b 50%, #cd853f 100%);
+    }
+}
+
+/* Sliding glow effect */
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.section-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e8e8e8 !important;
+    /* Light silver-gray for readability */
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+/* Mobile responsive for Mission and Vision */
+@media (max-width: 768px) {
+    .mission-vision {
+        padding: 3rem 0;
+    }
+
+    .mission-vision .container {
+        padding: 0 1rem;
+    }
+
+    .mission-vision-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .section-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .vision-section,
+    .mission-section {
+        margin-bottom: 2rem;
+    }
+
+    .mission-section {
+        margin-bottom: 0;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .mission-vision .container {
+        padding: 0 0.5rem;
+    }
+
+    .mission-vision-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .section-heading {
+        font-size: 1.3rem;
+    }
+
+    .section-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}

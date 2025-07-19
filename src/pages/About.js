@@ -73,6 +73,27 @@ const About = () => {
                 </div>
             </section>
 
+            {/* Mission and Vision Section */}
+            <section className="mission-vision section section-light">
+                <div className="container">
+                    <div className="mission-vision-content">
+                        <div className="vision-section">
+                            <h3 className="section-heading">Vision:</h3>
+                            <p className="section-text">
+                                Our vision is to become a leading force in India's sustainable industrial growth by becoming a reliable importer of high-quality aluminium and copper scrap, connecting global resources with local manufacturing needs. We aspire to support cleaner production, and promote a circular economy that benefits both business and environment.
+                            </p>
+                        </div>
+
+                        <div className="mission-section">
+                            <h3 className="section-heading">Mission:</h3>
+                            <p className="section-text">
+                                To support sustainable manufacturing, reduce environmental impact, and foster long term partnerships built on trust, transparency and efficiency. To focus on regular and bulk supply options for our clients. We aim to bridge the gap between international suppliers and domestic industries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Directors Section */}
             <section className="directors section section-gray">
                 {/* Subtle diagonal background pattern */}
