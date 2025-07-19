@@ -1,0 +1,119 @@
+/* Back Button Styles */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #C7784C;
+    color: #C7784C;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: inherit;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:hover {
+    background: #C7784C;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(199, 120, 76, 0.4);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+.back-button-icon {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.back-button:hover .back-button-icon {
+    transform: translateX(-1px);
+}
+
+.back-button-text {
+    font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .back-button {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+        gap: 4px;
+    }
+
+    .back-button-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Variants */
+.back-button.compact {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.back-button.large {
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    margin: 25px 0;
+}
+
+/* Back Button Container for consistent positioning */
+.back-button-container {
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .back-button-container {
+        top: 100px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button-container {
+        top: 90px;
+        left: 10px;
+    }
+}
+
+/* Focus states for accessibility */
+.back-button:focus {
+    outline: 2px solid #C7784C;
+    outline-offset: 2px;
+}
+
+.back-button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.back-button:focus-visible {
+    outline: 2px solid #C7784C;
+    outline-offset: 2px;
+}

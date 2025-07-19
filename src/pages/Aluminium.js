@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
+import BackButton from '../components/BackButton';
 import './Aluminium.css';
 import offwhiteImage from '../assets/offwhite.jpg';
 import aluminiumImage from '../assets/prod1.jpg'; // Placeholder, replace with actual image
@@ -37,6 +38,7 @@ const Aluminium = () => {
     return (
         <div className="aluminium-page" style={{ backgroundImage: `url(${offwhiteImage})` }}>
             <div className="container product-page-container">
+                <BackButton />
                 <h1 className="page-title">Aluminium Products</h1>
                 <div className="product-grid">
                     {aluminiumProducts.map((product, index) => (

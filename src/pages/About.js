@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import BackButton from '../components/BackButton';
 import aboutUsImage from '../assets/aboutusimage.png';
 import manishImage from '../assets/manish.png.jpg';
 import sangeetaImage from '../assets/sangeeta.png.jpg';
@@ -30,6 +31,7 @@ const About = () => {
 
     return (
         <div className="about">
+            <BackButton />
             {/* Hero Section */}
             <section className="about-hero section section-dark">
                 {/* Dark overlay for better text readability */}
@@ -76,6 +78,7 @@ const About = () => {
             {/* Mission and Vision Section */}
             <section className="mission-vision section section-light">
                 <div className="container">
+                    <BackButton />
                     <div className="mission-vision-content">
                         <div className="vision-section">
                             <h3 className="section-heading">Vision:</h3>

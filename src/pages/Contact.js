@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import BackButton from '../components/BackButton';
 import './Contact.css';
 
 const Contact = () => {
@@ -55,6 +56,7 @@ const Contact = () => {
         <div className="contact">
             <section className="contact-main section">
                 <div className="container contact-page-container">
+                    <BackButton />
                     <div className="contact-content">
                         {/* Contact Form */}
                         <div className="contact-form-container">

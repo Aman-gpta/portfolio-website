@@ -101,7 +101,7 @@
 
 .footer-links a,
 .footer-links span {
-    color: var(--white) !important;
+    color: #C7784C !important;
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 0.95rem;
@@ -133,7 +133,7 @@
 
 /* Footer Contact */
 .footer-contact p {
-    color: var(--secondary);
+    color: #C7784C !important;
     margin-bottom: 1rem;
     display: flex;
     align-items: flex-start;
@@ -145,7 +145,7 @@
 }
 
 .footer-contact p span {
-    color: var(--white) !important;
+    color: #C7784C !important;
 }
 
 .footer-contact p svg {
