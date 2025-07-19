@@ -12,19 +12,19 @@ const About = () => {
             name: "Manish Vijay",
             position: "Managing Director",
             image: manishImage,
-            description: "With over 15 years of experience in the metal industry, Manish leads our company with a vision for innovation and sustainability in metal trading."
+            description: "With over 15 years of experience in manufacturing and distribution within the minerals and pharmaceutical industries, Mr. Manish Vijay provides valuable strategic direction to the company. His deep industry insight and practical knowledge ensure strong foundations and steady growth for the organization."
         },
         {
             name: "Komal Vijay",
             position: "Director",
-            image: "director2.jpg", // You'll need to add these images to your assets folder
-            description: "Komal brings extensive technical expertise in metal processing and quality control. Her leadership ensures we deliver the highest quality materials to our clients."
+            image: komalImage,
+            description: "A B.Tech graduate with a forward-thinking approach, Ms. Komal Vijay brings energy and innovation to Anishk Impex Pvt. Ltd. She leads the company's import operations with a sharp focus on quality and efficiency, helping position the business as a trusted name in the aluminium scrap industry across India."
         },
         {
             name: "Sangeeta Gupta",
             position: "Director",
-            image: "director3.jpg", // You'll need to add these images to your assets folder
-            description: "Sangeeta oversees our operational excellence and supply chain management. Her strategic planning ensures efficient logistics and timely delivery of our metal products."
+            image: sangeetaImage,
+            description: "At this advanced stage of life, Ms. Sangeeta Gupta brings wisdom and a steady presence to the leadership team. While she does not have a business background, her guidance and support contribute to the company's values of integrity, responsibility, and long-term vision."
         }
     ];
 
@@ -100,7 +100,7 @@ const About = () => {
                 <div className="diagonal-lines"></div>
 
                 <div className="container">
-                    <h2 className="section-title">Our Leadership</h2>
+                    <h2 className="section-title">Our Directors</h2>
                     <div className="directors-grid">
                         {directors.map((director, index) => (
                             <div key={index} className="director-card">
