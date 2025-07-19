@@ -1,56 +1,60 @@
 import React from "react";
 import "./WhyChooseUs.css";
-import { FaClock, FaBolt, FaLeaf, FaLightbulb, FaMoneyBillWave, FaWrench } from "react-icons/fa";
+import { FaIndustry, FaCogs, FaClock, FaGlobe, FaUsers } from "react-icons/fa";
 import containerImg from "../assets/container.jpg";
 
 export default function WhyChooseUs() {
   return (
     <section className="wcu-section-imglayout">
       <h2 className="wcu-img-title">Why Choose Us</h2>
-      <div className="wcu-img-grid">
-        {/* Top Left */}
-        <div className="wcu-img-feature wcu-img-feature-topleft">
-          <FaClock className="wcu-img-icon" style={{ color: "#FFA726" }} />
-          <div>
-            <h3>Leading the Way in Power</h3>
-            <p>Experience excellence with our high-quality, affordable products</p>
+      <div className="wcu-flex-mainrow">
+        {/* Left column */}
+        <div className="wcu-flex-col wcu-flex-left">
+          <div className="wcu-point wcu-flex-topleft">
+            <FaIndustry className="wcu-img-icon" style={{ color: "#FFA726" }} />
+            <div>
+              <h3>Specialized in Aluminium and Copper Scrap</h3>
+              <p>Focused expertise in sourcing and supplying high grade aluminium and copper scrap of highest purity level.</p>
+            </div>
+          </div>
+          <div className="wcu-point wcu-flex-bottomleft">
+            <FaCogs className="wcu-img-icon" style={{ color: "#2979FF" }} />
+            <div>
+              <h3>Advanced Processing Facilities</h3>
+              <p>Consistent quality control with modern tools for cutting, cleaning, and sorting aluminium and copper.</p>
+            </div>
           </div>
         </div>
-        {/* Top Right */}
-        <div className="wcu-img-feature wcu-img-feature-topright">
-          <FaMoneyBillWave className="wcu-img-icon" style={{ color: "#66BB6A" }} />
-          <div>
-            <h3>Customer Satisfaction is Our Priority</h3>
-            <p>We go above and beyond to ensure our customers are fully satisfied with our products</p>
+        {/* Center image */}
+        <div className="wcu-flex-centerimg">
+          <img src={containerImg} alt="ANISHK IMPEX" className="wcu-img-main wcu-img-main-large" />
+        </div>
+        {/* Right column */}
+        <div className="wcu-flex-col wcu-flex-right">
+          <div className="wcu-point wcu-flex-topright">
+            <FaClock className="wcu-img-icon" style={{ color: "#66BB6A" }} />
+            <div>
+              <h3>Timely Service with Honest Pricing</h3>
+              <p>Fast deliveries for low downtime and transparent pricing with no hidden costs.</p>
+            </div>
+          </div>
+          <div className="wcu-point wcu-flex-bottomright">
+            <FaGlobe className="wcu-img-icon" style={{ color: "#90A4AE" }} />
+            <div>
+              <h3>Domestic & International Reach</h3>
+              <p>Trusted by clients across local and global markets, compliant with import and custom regulations.</p>
+            </div>
           </div>
         </div>
-        {/* Bottom Left */}
-        <div className="wcu-img-feature wcu-img-feature-bottomleft">
-          <FaBolt className="wcu-img-icon" style={{ color: "#2979FF" }} />
+      </div>
+      {/* Bottom center row */}
+      <div className="wcu-flex-bottomrow">
+        <div className="wcu-point wcu-flex-bottomcenter">
+          <FaUsers className="wcu-img-icon" style={{ color: "#8BC34A" }} />
           <div>
-            <h3>Unmatched Quality and Affordability</h3>
-            <p>We deliver top-notch products that won’t break the bank, ensuring value for your investment</p>
+            <h3>Customer Focused Approach</h3>
+            <p>Custom solutions based on metal specifications and volume needed. Professionals ready to support with orders, logistics and any other queries.</p>
           </div>
-        </div>
-        {/* Bottom Right */}
-        <div className="wcu-img-feature wcu-img-feature-bottomright">
-          <FaWrench className="wcu-img-icon" style={{ color: "#90A4AE" }} />
-          <div>
-            <h3>Reliable Performance You Can Trust</h3>
-            <p>Count on our power electronics solutions for consistent performs and long-term reliability</p>
-          </div>
-        </div>
-        {/* Bottom Center */}
-        <div className="wcu-img-feature wcu-img-feature-bottomcenter">
-          <FaLeaf className="wcu-img-icon" style={{ color: "#8BC34A" }} />
-          <FaLightbulb className="wcu-img-icon" style={{ color: "#FFD600", marginLeft: 8 }} />
-          <div>
-            <h3>Innovation Driving Sustainable Power</h3>
-          </div>
-        </div>
-        {/* Center Image */}
-        <div className="wcu-img-center wcu-img-center-mobile-last">
-          <img src={containerImg} alt="ANISHK IMPEX" className="wcu-img-main" />
         </div>
       </div>
     </section>

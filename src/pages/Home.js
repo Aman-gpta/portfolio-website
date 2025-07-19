@@ -60,53 +60,33 @@ const Home = () => {
                         <div className="company-text">
                             <h1 className="company-title">ANISHK IMPEX PVT. LTD.</h1>
                             <p className="company-description">
-                                Welcome to Anishk Impex Pvt. Ltd., a newly established venture in
-                                the global metal trade. We specialize in importing high-quality
-                                aluminum and copper scrap from around the world. Our offerings
-                                include premium aluminum ingots and copper CCR coils to meet
-                                diverse industrial needs. Trust us for reliable sourcing and
-                                committed service.
+                                Welcome to Anishk Impex Pvt. Ltd., a newly established venture in the global metal trade. We specialize in importing high-quality aluminum and copper scrap from around the world. Our offerings include premium aluminum ingots and copper CCR coils to meet diverse industrial needs. Trust us for reliable sourcing and committed service. We are Licensed and compliant with all environmental and trade regulations.
                             </p>
 
                             <div className="company-features">
                                 <div className="feature-item">
                                     <div className="feature-icon">
-                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                                            <circle cx="25" cy="25" r="20" stroke="#000000" strokeWidth="2" fill="none" />
-                                            <path d="M17 25 L22 30 L33 19" stroke="#000000" strokeWidth="2" fill="none" />
-                                        </svg>
+                                        <span style={{ fontSize: '2rem' }}>♻️</span>
                                     </div>
                                     <div className="feature-content">
                                         <h3>Quality and sustainability</h3>
-                                        <p>We ensure top-grade aluminum and copper scrap sourced from verified suppliers, supporting sustainable industry practices.</p>
+                                        <p>We ensure top-grade aluminium and copper scrap sourced from verified suppliers, supporting sustainable industry practices.</p>
                                     </div>
                                 </div>
 
                                 <div className="feature-item">
                                     <div className="feature-icon">
-                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                                            <rect x="12" y="20" width="26" height="12" rx="2" stroke="#000000" strokeWidth="2" fill="none" />
-                                            <path d="M38 26 L42 25 L38 24" stroke="#000000" strokeWidth="2" fill="none" />
-                                            <circle cx="18" cy="26" r="4" stroke="#000000" strokeWidth="1.5" fill="none" />
-                                            <circle cx="32" cy="26" r="4" stroke="#000000" strokeWidth="1.5" fill="none" />
-                                        </svg>
+                                        <span style={{ fontSize: '2rem' }}>🚢</span>
                                     </div>
                                     <div className="feature-content">
                                         <h3>Wide import capability</h3>
-                                        <p>Taint Tabor, Tense, UBC, and Mixed Aluminum Scrap available for various manufacturing and recycling industries.</p>
+                                        <p>Taint Tabor, Tense, UBC, and Mixed Aluminium Scrap available for various manufacturing and recycling industries.</p>
                                     </div>
                                 </div>
 
                                 <div className="feature-item">
                                     <div className="feature-icon">
-                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                                            <path d="M17 20 L33 20" stroke="#000000" strokeWidth="2" />
-                                            <path d="M17 30 L33 30" stroke="#000000" strokeWidth="2" />
-                                            <circle cx="17" cy="25" r="2" fill="#000000" />
-                                            <circle cx="33" cy="25" r="2" fill="#000000" />
-                                            <path d="M13 16 L13 34" stroke="#000000" strokeWidth="2" />
-                                            <path d="M37 16 L37 34" stroke="#000000" strokeWidth="2" />
-                                        </svg>
+                                        <span style={{ fontSize: '2rem' }}>🤝</span>
                                     </div>
                                     <div className="feature-content">
                                         <h3>Reliable partnerships</h3>
