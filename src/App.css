@@ -68,7 +68,6 @@ p {
 /* Section styling */
 .section {
   padding: 80px 0;
-  min-height: 100vh;
 }
 
 .section-dark {

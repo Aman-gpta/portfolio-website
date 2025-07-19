@@ -1,6 +1,6 @@
 .scroll-to-top-btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 30px;
     background-color: #333;
     color: white;
@@ -17,6 +17,15 @@
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
 }
 
 .scroll-to-top-btn.visible {
