@@ -388,9 +388,11 @@
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     position: relative;
     overflow: visible;
-    white-space: normal;
-    word-wrap: break-word;
+    white-space: nowrap;
+    word-wrap: normal;
     opacity: 0;
+    display: block;
+    width: 100%;
 }
 
 .typewriter-line.fade-in-up {
@@ -398,7 +400,8 @@
 }
 
 .second-line {
-    margin-top: 0.2em;
+    margin-top: 0.5em;
+    display: block;
 }
 
 /* Mobile responsive adjustments for typewriter */

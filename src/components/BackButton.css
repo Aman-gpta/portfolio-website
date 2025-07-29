@@ -80,10 +80,10 @@
 /* Back Button Container for consistent positioning */
 .back-button-container {
     position: fixed;
-    top: 120px;
+    top: 130px;
     left: 20px;
     z-index: 999;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 8px;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -91,14 +91,14 @@
 
 @media (max-width: 768px) {
     .back-button-container {
-        top: 100px;
+        top: 90px;
         left: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .back-button-container {
-        top: 90px;
+        top: 80px;
         left: 10px;
     }
 }

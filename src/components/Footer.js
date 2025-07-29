@@ -95,14 +95,12 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Services */}
+                    {/* Products */}
                     <div className="footer-section">
-                        <h4>Services</h4>
+                        <h4>Products</h4>
                         <ul className="footer-links">
-                            <li><span>Aluminium Scrap Trading</span></li>
-                            <li><span>Copper Scrap Trading</span></li>
-                            <li><span>Recycling Solutions</span></li>
-                            <li><span>Industrial Materials</span></li>
+                            <li><span>Aluminium Scrap</span></li>
+                            <li><span>Copper Scrap</span></li>
                         </ul>
                     </div>
 
@@ -110,6 +108,10 @@ const Footer = () => {
                     <div className="footer-section contact-section">
                         <h4>Get In Touch</h4>
                         <div className="footer-contact">
+                            <p>
+                                <MapPin size={16} />
+                                <span>1st Floor, SB-10, Narayan Sagar, Narayan Vihar, Gopalpura Bypass, Ajmer, Road, Jaipur, Rajasthan 302020</span>
+                            </p>
                             <p>
                                 <Mail size={16} />
                                 <span>anishkimpex@gmail.com</span>

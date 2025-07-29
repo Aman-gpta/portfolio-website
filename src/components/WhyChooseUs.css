@@ -268,18 +268,23 @@
 /* --- Why Choose Us Image Layout --- */
 .wcu-section-imglayout {
     background: url('../assets/offwhite.jpg') center center/cover no-repeat;
-    padding: 60px 10px 40px 10px;
+    padding: 15px 10px 15px 10px;
     text-align: center;
     padding-left: 8vw;
     padding-right: 8vw;
     box-sizing: border-box;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .wcu-img-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #1a2a3a;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
 
@@ -618,8 +623,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    gap: 48px;
-    margin-bottom: 32px;
+    gap: 20px;
+    margin-bottom: 10px;
 }
 
 .wcu-flex-col {
@@ -628,7 +633,7 @@
     justify-content: space-between;
     align-items: flex-end;
     flex: 1 1 260px;
-    gap: 48px;
+    gap: 20px;
 }
 
 .wcu-flex-left {
@@ -643,27 +648,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 520px;
+    flex: 0 0 380px;
 }
 
 .wcu-img-main-large {
-    width: 420px;
+    width: 250px;
     height: auto;
     max-width: 100%;
-    border-radius: 28px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
 }
 
 .wcu-point {
     background: url('../assets/offwhite.jpg') center center/cover no-repeat;
-    border-radius: 18px;
+    border-radius: 14px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-    padding: 10px 44px 10px 44px;
-    min-width: 340px;
-    max-width: 520px;
+    padding: 8px 20px 8px 20px;
+    min-width: 280px;
+    max-width: 400px;
     display: flex;
     align-items: flex-start;
-    gap: 18px;
+    gap: 12px;
     text-align: left;
 }
 
@@ -671,7 +676,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 32px;
+    margin-top: 5px;
 }
 
 .wcu-flex-bottomcenter {
@@ -680,16 +685,16 @@
 
 .wcu-point h3 {
     color: #1a2a3a;
-    font-size: 1.12rem;
+    font-size: 1rem;
     font-weight: 700;
-    margin: 0 0 8px 0;
+    margin: 0 0 4px 0;
 }
 
 .wcu-point p {
     color: #222;
-    font-size: 0.98rem;
+    font-size: 0.9rem;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.3;
 }
 
 @media (max-width: 1200px) {
