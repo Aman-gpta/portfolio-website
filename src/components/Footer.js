@@ -3,6 +3,7 @@ import './Footer.css';
 import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Award, Shield, Recycle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoImage from '../assets/Gemini_Generated_Image_ljsew6ljsew6ljse.png';
+import LightRays from './LightRays';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -55,6 +56,24 @@ const Footer = () => {
 
     return (
         <footer className="footer">
+            {/* Light Rays Effect */}
+            <div className="footer-light-rays">
+                <LightRays
+                    raysOrigin="top-center"
+                    raysColor="#c7784c"
+                    raysSpeed={0.8}
+                    lightSpread={0.8}
+                    rayLength={2.5}
+                    followMouse={true}
+                    mouseInfluence={0.08}
+                    noiseAmount={0.03}
+                    distortion={0.02}
+                    fadeDistance={2.0}
+                    saturation={0.9}
+                    pulsating={false}
+                    className="footer-rays"
+                />
+            </div>
             <div className="container">
                 <div className="footer-content">
                     {/* Footer Brand */}

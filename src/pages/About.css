@@ -237,7 +237,7 @@
 
 /* Directors Section */
 .directors {
-    padding: 2rem 0 4rem 0;
+    padding: 1rem 0 2rem 0; /* Reduced padding for better single-page fit */
     position: relative;
     background: transparent !important;
 }
@@ -258,13 +258,14 @@
 .director-card {
     background: linear-gradient(135deg, #444 60%, #666 100%) !important;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem; /* Added extra bottom padding */
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 350px;
+    height: auto; /* Changed from fixed height to auto */
+    min-height: 320px; /* Added minimum height */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -273,12 +273,43 @@
     padding-left: 8vw;
     padding-right: 8vw;
     box-sizing: border-box;
-    max-height: 100vh;
+    min-height: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
 }
+
+/* Fix mobile scroll issues */
+@media (max-width: 900px) {
+    .wcu-section-imglayout {
+        height: auto;
+        min-height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+/* Alternative: Custom thin scrollbar (uncomment if you want a subtle visible scrollbar) */
+/*
+.wcu-section-imglayout::-webkit-scrollbar {
+    width: 4px;
+}
+
+.wcu-section-imglayout::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.wcu-section-imglayout::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.wcu-section-imglayout::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+*/
 
 .wcu-img-title {
     font-size: 1.8rem;
@@ -648,11 +679,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 380px;
+    flex: 0 0 550px;
 }
 
 .wcu-img-main-large {
-    width: 250px;
+    width: 450px;
     height: auto;
     max-width: 100%;
     border-radius: 20px;
@@ -663,12 +694,12 @@
     background: url('../assets/offwhite.jpg') center center/cover no-repeat;
     border-radius: 14px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-    padding: 8px 20px 8px 20px;
+    padding: 12px 16px;
     min-width: 280px;
     max-width: 400px;
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
     text-align: left;
 }
 

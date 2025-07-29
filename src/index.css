@@ -5,30 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Hide scrollbar but keep scroll functionality */
-  overflow-y: scroll;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide mobile browser back button */
+@media (max-width: 768px) {
+  /* Hide browser back button on mobile */
+  ::-webkit-back-button,
+  .back-button,
+  [data-back-button],
+  button[aria-label*="back" i],
+  button[aria-label*="Back" i] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Hide any floating back buttons */
+  .floating-back-button,
+  .mobile-back-button {
+    display: none !important;
+  }
+}
+
+/* Prevent horizontal scroll on all elements */
+html, body {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar styling for better visibility */
 body::-webkit-scrollbar {
-  display: none;
+  width: 12px;
 }
 
-/* Apply to all scrollable elements */
-* {
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
 }
 
-*::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari and Opera */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox scrollbar styling */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #888 #f1f1f1;
 }
 
 code {

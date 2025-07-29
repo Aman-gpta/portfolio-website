@@ -3,6 +3,76 @@
     background: var(--gradient-primary);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 3rem 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Light Rays Effect */
+.footer-light-rays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.footer-rays {
+    width: 100%;
+    height: 100%;
+    min-height: 400px; /* Ensure minimum height for mobile */
+}
+
+/* Ensure footer content is above the light rays */
+.footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile fixes for light rays */
+@media (max-width: 768px) {
+    .footer-light-rays {
+        opacity: 0.4; /* Much more subtle on mobile */
+        min-height: 100%;
+        background: linear-gradient(180deg, 
+            rgba(199, 120, 76, 0.06) 0%, 
+            rgba(199, 120, 76, 0.03) 30%, 
+            transparent 60%
+        ); /* Softer CSS fallback for mobile */
+    }
+    
+    .footer-rays {
+        min-height: 300px; /* Shorter height on mobile */
+    }
+    
+    .footer {
+        min-height: auto; /* Let content determine height */
+        position: relative;
+    }
+    
+    /* Softer fallback gradient overlay for mobile */
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px; /* Much shorter rays */
+        background: radial-gradient(ellipse 80% 60% at top center, 
+            rgba(199, 120, 76, 0.08) 0%, 
+            rgba(199, 120, 76, 0.04) 40%, 
+            transparent 70%
+        );
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    .footer .container {
+        position: relative;
+        z-index: 3;
+    }
 }
 
 .footer-content {

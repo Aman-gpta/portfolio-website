@@ -91,8 +91,7 @@
 
 @media (max-width: 768px) {
     .back-button-container {
-        top: 90px;
-        left: 15px;
+        display: none; /* Hide back button on mobile */
     }
 }
 
